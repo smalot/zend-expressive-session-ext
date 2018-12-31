@@ -149,6 +149,7 @@ class PhpSessionPersistence implements SessionPersistenceInterface
     {
         session_id($id);
         session_start(array_merge([
+            'read_and_close'   => true,
             'use_cookies'      => false,
             'use_only_cookies' => true,
             'cache_limiter'    => '',
